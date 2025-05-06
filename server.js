@@ -41,6 +41,11 @@ app.get('/logout', (req, res) => {
   });
 });
 
+// 🔽 ESTA ES LA LÍNEA QUE HACE QUE SE MUESTRE login.html AL ENTRAR A "/"
+app.get('/', (req, res) => {
+  res.redirect('/login.html');
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor en http://localhost:${PORT}`);
 });
