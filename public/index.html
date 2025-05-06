@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio subido a Render</title>
+		<meta name="description" content="Solución Ejercicio 03" />
+		<link rel="stylesheet" href="css/estilo.css" type="text/css" />
+		<script
+			src="https://kit.fontawesome.com/c74fd16976.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<div class="menu-pc">
+				<div class="logo">
+					<a href="#">GRILL</a>
+				</div>
+				<nav class="menu-principal">
+					<a href="login.html">Iniciar sesión</a>
+					<a href="#inicio">INICIO</a>
+					<a href="#especialidades">ESPECIALIDADES</a>
+					<a href="#servicios">SERVICIOS</a>
+					<a href="#contacto">CONTACTO</a>
+				</nav>
+			</div>
+
+			<div class="menu-movil">
+				<div class="logo">
+					<a href="#">GRILL</a>
+				</div>
+				<div class="barras-menu" id="barras_menu">
+					<i class="fas fa-bars"></i>
+				</div>
+
+				<div class="slidemenu" id="slidemenu">
+					<nav class="menu-principal">
+						<a href="#inicio">INICIO</a>
+						<a href="#especialidades">ESPECIALIDADES</a>
+						<a href="#servicios">SERVICIOS</a>
+						<a href="#contacto">CONTACTO</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<section class="portada" id="inicio">
+			<div class="slideshow">
+				<img src="imagenes/slide-01.jpg" alt="comida a la parrilla" />
+			</div>
+			<div class="texto-portada">
+				<h3>¡La mejor BBQ!</h3>
+			</div>
+		</section>
+
+				<section id="especialidades">
+			<div class="contenido">
+				<div class="titulo-seccion">
+					<h2>ESPECIALIDADES DE LA CASA</h2>
+					<hr />
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
+						dapibus leonec.
+					</p>
+				</div>
+				<div class="fila">
+					<div class="caja-servicios">
+						<img
+							src="imagenes/service1.jpg"
+							
+							alt="Ensalada de bacalao"
+						/>
+						<h3>Ensalada de bacalao</h3>
+						<p>
+							Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus
+							eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet
+							placerat facilisis felis mi in tempus eleifend.
+						</p>
+					</div>
+					<div class="caja-servicios">
+						<img
+							src="imagenes/service2.jpg"
+							alt="Twinkies"
+						/>
+						<h3>Twinkies</h3>
+						<p>
+							Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus
+							eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet
+							placerat facilisis felis mi in tempus eleifend.
+						</p>
+					</div>
+					<div class="caja-servicios">
+						<img
+							src="imagenes/service3.jpg"
+							alt="Hamburguesa BBQ"
+						/>
+						<h3>Burger BBQ</h3>
+						<p>
+							Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus
+							eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet
+							placerat facilisis felis mi in tempus eleifend.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="servicios">
+			<div class="color-fondo">
+				<div class="contenido">
+					<div class="titulo-seccion">
+						<h2>Lo que ofrecemos</h2>
+						<hr />
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
+							dapibus leonec.
+						</p>
+					</div>
+					<div class="fila">
+						<div class="producto">
+				                <h3><i class="fa fa-coffee" aria-hidden="true"></i> CAFÉ</h3>
+							<p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus placerat facilisis felis mi in tempus eleifend.</p>
+						</div>
+						<div class="producto">
+				            <h3><i class="fas fa-bacon"></i> DESAYUNO</h3>
+							<p>Lorem ipsum dolor  natoque etiam. Lorem ipsum dolor sit amet	placerat facilisis felis mi in tempus eleifend.</p>
+						</div>
+						<div class="producto">
+				            <h3><i class="fa fa-cutlery" aria-hidden="true"></i> COMIDAS & CENAS</h3>
+							<p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contacto">
+			<div class="contenido">
+				<div class="titulo-seccion">
+					<h2>ESCRÍBENOS</h2>
+					<hr />
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
+						dapibus leonec.
+					</p>
+				</div>
+				<div class="fila">
+                    <div class="formulario">
+						<form name="enviaMensaje" id="formularioContacto" action="emailto:info@jovellanos.es">
+							<input type="text" name="nombre" placeholder="Nombre" />
+							<input
+								type="email"
+								name="email"
+								placeholder="Correo Electrónico"
+							/>
+							<textarea
+								name="mensaje"
+								rows="4"
+								placeholder="Mensaje"
+							></textarea>
+							<button type="submit" name="Enviar" value="Enviar" class="boton">
+								Enviar
+							</button>
+						</form>
+					</div>
+                    
+					<div class="direccion">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9768.872530662307!2d-7.13615!3d39.35834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfb3eab9b74cc6bed!2sCentro%20Estudios%20Jovellanos!5e1!3m2!1ses!2ses!4v1631722266010!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="contenido">
+					<p>
+						&copy; 2021 - Curso de Diseño Web - Óscar Tinoco Tortosa
+					</p>
+            </div>
+		</footer>
+		<script src="js/menumovil.js"></script>
+		<script src="js/slideshow.js"></script>
+	</body>
+</html>
