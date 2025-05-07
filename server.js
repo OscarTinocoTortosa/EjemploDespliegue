@@ -3,6 +3,7 @@ const path = require('path');
 const session = require('express-session');
 const app = express();
 const PORT = process.env.PORT || 3004;
+const db = require('./database');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,12 +20,38 @@ const USUARIO = {
 
 app.post('/login', (req, res) => {
   const { usuario, contrasena } = req.body;
-  if (usuario === USUARIO.nombre && contrasena === USUARIO.contrasena) {
-    req.session.usuario = usuario;
-    res.redirect('/privado');
-  } else {
-    res.send('Credenciales incorrectas. <a href="/login.html">Intentar de nuevo</a>');
-  }
+
+  db.get(
+    'SELECT * FROM usuarios WHERE nombre = ? AND contrasena = ?',
+    [usuario, contrasena],
+    (err, fila) => {
+      if (err) {
+        return res.send('Error de base de datos');
+      }
+
+      if (fila) {
+        req.session.usuario = fila.nombre;
+        res.redirect('/privado');
+      } else {
+        res.send('Credenciales incorrectas. <a href="/login.html">Intentar de nuevo</a>');
+      }
+    }
+  );
+});
+
+app.post('/registro', (req, res) => {
+  const { usuario, contrasena } = req.body;
+
+  db.run(
+    'INSERT INTO usuarios (nombre, contrasena) VALUES (?, ?)',
+    [usuario, contrasena],
+    function (err) {
+      if (err) {
+        return res.send('Usuario ya existe o error al registrar');
+      }
+      res.send('Usuario registrado correctamente. <a href="/login.html">Iniciar sesión</a>');
+    }
+  );
 });
 
 app.get('/privado', (req, res) => {
